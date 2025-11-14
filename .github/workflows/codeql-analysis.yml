@@ -9,6 +9,13 @@ on:
 jobs:
   analyze:
     runs-on: ubuntu-latest
+
+    # Not included in lab but necessary for CodeQL to function
+    permissions:
+      actions: read
+      contents: read
+      security-events: write  
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
